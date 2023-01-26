@@ -723,6 +723,10 @@
     </div>
 </div>
 
+<button id="top" on:click={() => window.scrollTo({ top: 0 })}>
+    <i class="material-icons">arrow_upward</i>
+</button>
+
 <style lang="scss">
     div#top-block {
         background-color: #28a;
@@ -762,5 +766,17 @@
         padding: 2em 0;
         background-attachment: fixed;
         background-size: cover;
+    }
+
+    button#top {
+        position: fixed;
+        right: 5vw;
+        bottom: 5vh;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        background-color: #227;
+        color: white;
+        padding-top: 5px;
     }
 </style>

@@ -64,10 +64,6 @@
     on:keydown={() => (open = false)}
 />
 
-<button id="top" on:click={() => window.scrollTo({ top: 0 })}>
-    <i class="material-icons">arrow_upward</i>
-</button>
-
 <style lang="scss">
     nav {
         background-color: rgba(20, 50, 80, var(--opacity));
@@ -151,17 +147,5 @@
                 background-color: #ffffff11;
             }
         }
-    }
-
-    button#top {
-        position: fixed;
-        right: 5vw;
-        bottom: 5vh;
-        outline: none;
-        border: none;
-        border-radius: 3px;
-        background-color: #227;
-        color: white;
-        padding-top: 5px;
     }
 </style>
