@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;600&display=swap");
+
+@font-face {
+    font-family: "Genshin";
+    src: url(/fonts/zh-cn.ttf);
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    position: relative;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: white;
+    line-height: 175%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    margin: 0;
+    min-height: 100vh;
+}
+
+img.header-image {
+    width: 50%;
+}
+
+@media screen and (max-width: 1000px) {
+    img.header-image {
+        width: 95%;
+    }
+}
+
+p {
+    font-size: 120%;
+}
+
+a {
+    color: #33ddff;
+    text-decoration: none;
+}
+
+b {
+    font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Genshin", serif;
+}
+
+table,
+tr,
+td {
+    border: none;
+}
+
+td {
+    vertical-align: middle;
+    margin: 0;
+    padding: 0.5em;
+}
