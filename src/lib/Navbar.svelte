@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { goto } from "$app/navigation";
     import { page } from "$app/stores";
     import { user } from "./stores.js";
 
@@ -17,7 +18,34 @@
     let open: boolean = false;
 </script>
 
-<svelte:window bind:scrollY={y} bind:innerWidth={width} bind:innerHeight={height} />
+<svelte:window
+    bind:scrollY={y}
+    bind:innerWidth={width}
+    bind:innerHeight={height}
+    on:keydown={(e) => {
+        if (e.key === "Escape") open = false;
+        else if (e.key === "k" && e.ctrlKey) {
+            e.preventDefault();
+            open = !open;
+        } else if (open) {
+            if (e.key === "h") goto("/");
+            else if (e.key === "g") goto("/guide");
+            else if (e.key === "e")
+                window.open(
+                    "https://docs.google.com/spreadsheets/d/1-vkmgp5n0bI9pvhUg110Aza3Emb2puLWdeoCgrxDlu4",
+                );
+            else if (e.key === "s") goto("/apply");
+            else if (e.key === "c") goto("/tech");
+            else if (e.key === "d") window.open("https://discord.gg/shenhe");
+            else if (e.key === "r") window.open("https://reddit.com/r/shenhemains");
+            else if (e.key === "t") window.open("https://twitch.tv/shenhemains");
+            else if (e.key === "l") goto($user ? "/api/logout" : "/api/login");
+            else return;
+
+            open = false;
+        }
+    }}
+/>
 
 <nav style="--height: {Math.max(50, 100 - scale / 2)}px; --opacity: {Math.min(100, scale)}%">
     <span style="width: 15%" />
@@ -51,6 +79,7 @@
             <a href="https://reddit.com/r/shenhemains" target="_blank" rel="noreferrer">
                 Subreddit
             </a>
+            <a href="https://twitch.tv/shenhemains" target="_blank" rel="noreferrer">Twitch</a>
         </div>
         <div>
             {#if $user}

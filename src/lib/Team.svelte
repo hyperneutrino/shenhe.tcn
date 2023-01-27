@@ -5,19 +5,21 @@
     export let team: [string, string, string, string];
 </script>
 
-<div class="outer">
-    <div class="title-box">
-        <div class="title">
-            {name}
+<div class="back">
+    <div class="outer">
+        <div class="title-box">
+            <div class="title">
+                {name}
+            </div>
         </div>
-    </div>
-    <div class="box">
-        {#each team as slot, index}
-            {#if index !== 0}
-                <span>✦</span>
-            {/if}
-            <TeamSlot {slot} />
-        {/each}
+        <div class="box">
+            {#each team as slot, index}
+                {#if index !== 0}
+                    <span>✦</span>
+                {/if}
+                <TeamSlot {slot} />
+            {/each}
+        </div>
     </div>
 </div>
 
@@ -30,10 +32,17 @@
         align-items: center;
     }
 
+    div.back {
+        background-image: url(/images/decor1.png);
+        border-radius: 10px;
+    }
+
     div.outer {
         flex-direction: column;
 
-        background-color: #0002;
+        background-color: #2469;
+        backdrop-filter: blur(2px);
+
         padding: 1em;
         border-radius: 10px;
         border: 5px double #adf;

@@ -311,46 +311,48 @@
 <div style="background-color: #146; padding-top: 50px; padding-bottom: 150px">
     <Container>
         <div id="toc-box">
-            <div id="toc">
-                <b>Table of Contents</b>
-                <ul>
-                    <li><a href="#whois">Who is Shenhe?</a></li>
-                    <li><a href="#role">What is her role?</a></li>
-                    <li>
-                        <a href="#why">Why should you play/pull for Shenhe?</a>
-                        <ul><li><a href="#pros-cons">Pros &amp; Cons</a></li></ul>
-                    </li>
-                    <li><a href="#complaints">Addressing Common Complaints</a></li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="#talents">Talents</a>
-                        <ul>
-                            <li><a href="#breakdown">Breakdown</a></li>
-                            <li><a href="#priority">Priority</a></li>
-                            <li><a href="#ascension">Ascension</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#constellations">Constellations</a></li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="#artifacts">Artifacts</a>
-                        <ul>
-                            <li><a href="#sets">Sets</a></li>
-                            <li><a href="#stats">Stats</a></li>
-                            <li><a href="#er">ER Requirements</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#weapons">Weapons</a></li>
-                    <li><a href="#synergy">Character Synergy</a></li>
-                    <li><a href="#teams">Sample Teams</a></li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="#credits">Credits</a>
-                    </li>
-                </ul>
+            <div id="toc-back">
+                <div id="toc">
+                    <b>Table of Contents</b>
+                    <ul>
+                        <li><a href="#whois">Who is Shenhe?</a></li>
+                        <li><a href="#role">What is her role?</a></li>
+                        <li>
+                            <a href="#why">Why should you play/pull for Shenhe?</a>
+                            <ul><li><a href="#pros-cons">Pros &amp; Cons</a></li></ul>
+                        </li>
+                        <li><a href="#complaints">Addressing Common Complaints</a></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#talents">Talents</a>
+                            <ul>
+                                <li><a href="#breakdown">Breakdown</a></li>
+                                <li><a href="#priority">Priority</a></li>
+                                <li><a href="#ascension">Ascension</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#constellations">Constellations</a></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#artifacts">Artifacts</a>
+                            <ul>
+                                <li><a href="#sets">Sets</a></li>
+                                <li><a href="#stats">Stats</a></li>
+                                <li><a href="#er">ER Requirements</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#weapons">Weapons</a></li>
+                        <li><a href="#synergy">Character Synergy</a></li>
+                        <li><a href="#teams">Sample Teams</a></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#credits">Credits</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </Container>
@@ -1114,6 +1116,23 @@
         }
     }
 
+    h2 {
+        background-image: url(/images/namecard.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 137px;
+
+        @media screen and (max-width: 1000px) {
+            background-position: center;
+            height: 112px;
+        }
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
     @media screen and (min-width: 1000px) {
         div#toc-box {
             position: fixed;
@@ -1125,15 +1144,27 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+
+            opacity: 80%;
+        }
+
+        #toc-back {
+            background-image: url(/images/decor3.png);
+            background-size: cover;
+            background-position: 80%;
+            border-radius: 10px;
         }
 
         div#toc {
-            background-color: #ffffff11;
-            backdrop-filter: blur(5px);
             padding: 2em;
+
+            background-color: #2469;
+            backdrop-filter: blur(1px);
 
             font-size: 90%;
             line-height: 150%;
+
+            border-radius: 10px;
         }
 
         div.main {
