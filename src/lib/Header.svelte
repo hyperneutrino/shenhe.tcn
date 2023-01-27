@@ -30,7 +30,7 @@
         padding: 8vh 0;
         background: linear-gradient(to right, transparent, #aaaaaa33, transparent);
         mask: linear-gradient(transparent, black, transparent);
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur(3px);
     }
 
     div.content {

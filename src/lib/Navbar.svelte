@@ -1,5 +1,6 @@
 <script lang="ts">
     import { page } from "$app/stores";
+    import { user } from "./stores.js";
 
     let y: number = 0;
     let scale: number;
@@ -14,8 +15,6 @@
     $: scale = Math.max(0, y - offset) / 2;
 
     let open: boolean = false;
-
-    export let user: any;
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerWidth={width} bind:innerHeight={height} />
@@ -40,19 +39,20 @@
             <a href="/" on:click={() => (open = false)}><b>Home</b></a>
             <a href="/guide" on:click={() => (open = false)}>Guide</a>
             <a href="/apply" on:click={() => (open = false)}>Staff Applications</a>
-            <a href="/announcements" on:click={() => (open = false)}>Announcements</a>
-            <a href="/events" on:click={() => (open = false)}>Events</a>
-            <a href="/socials" on:click={() => (open = false)}>Socials</a>
+            <a href="https://discord.gg/shenhe" target="_blank" rel="noreferrer">Discord Server</a>
+            <a href="https://reddit.com/r/shenhemains" target="_blank" rel="noreferrer">
+                Subreddit
+            </a>
         </div>
         <div>
-            {#if user}
+            {#if $user}
                 <a href="/profile" on:click={() => (open = false)}>
                     <b>Welcome,</b>
-                    {user.username}#{user.discriminator}!
+                    {$user.username}#{$user.discriminator}!
                 </a>
-                <a href="/api/logout">Log Out</a>
+                <a href="/api/logout?redirect={encodeURIComponent($page.url.pathname)}">Log Out</a>
             {:else}
-                <a href="/api/login">Log In</a>
+                <a href="/api/login?redirect={encodeURIComponent($page.url.pathname)}">Log In</a>
             {/if}
         </div>
     </div>

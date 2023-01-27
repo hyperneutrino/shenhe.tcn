@@ -1,5 +1,6 @@
 <script context="module" lang="ts">
     export const data = {
+        custom: { name: "", url: "" },
         normal_attack: {
             name: "[Normal Attack] Dawnstar Piercer",
             url: "/images/icons/TA.webp",
@@ -64,16 +65,19 @@
 </script>
 
 <script lang="ts">
-    export let key: keyof typeof data;
+    export let key: keyof typeof data = "custom";
 
     export let show: "both" | "image" | "text" = "both";
     export let size: string = "50px";
     export let suffix: string = "";
+
+    export let icon: string | null = null;
+    export let name: string | null = null;
 </script>
 
 <h4>
-    {#if show !== "text"}<img alt={key} src={data[key].url} height={size} />{/if}
-    {#if show !== "image"}{data[key].name} {suffix}{/if}
+    {#if show !== "text"}<img alt={key} src={icon ?? data[key].url} height={size} />{/if}
+    {#if show !== "image"}{@html name ?? data[key].name} {suffix}{/if}
 </h4>
 
 <style lang="scss">

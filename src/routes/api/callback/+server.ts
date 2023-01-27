@@ -1,11 +1,17 @@
 import config from "config";
 import type { RequestHandler } from "./$types.js";
 
-const fail = () => new Response(null, { headers: { Location: "/" }, status: 302 });
+const fail = (path: string = "/") =>
+    new Response(null, { headers: { Location: path }, status: 302 });
 
 export const GET: RequestHandler = async ({ cookies, url, fetch }) => {
     const code = url.searchParams.get("code");
     if (!code) return fail();
+
+    const state = url.searchParams.get("state");
+    if (!state) return fail("/?state-mismatch");
+
+    if (state.substring(0, 32) !== cookies.get("state")) return fail("/?state-mismatch");
 
     const data = {
         client_id: config.get("client_id") as string,
@@ -28,7 +34,7 @@ export const GET: RequestHandler = async ({ cookies, url, fetch }) => {
     const access_token_expiry = new Date(Date.now() + response.expires_in);
     const refresh_token_expiry = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
 
-    const headers = new Headers({ Location: "/" });
+    const headers = new Headers({ Location: state.substring(32) });
 
     headers.append(
         "Set-Cookie",

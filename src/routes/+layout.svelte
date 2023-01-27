@@ -1,7 +1,10 @@
 <script lang="ts">
     import Navbar from "$lib/Navbar.svelte";
+    import { user } from "$lib/stores.js";
 
     export let data: any;
+
+    $: user.set(data?.user);
 </script>
 
 <html lang="en">
@@ -35,8 +38,7 @@
     </head>
 
     <body>
-        <Navbar user={data?.user} />
-
+        <Navbar />
         <slot />
     </body>
 </html>

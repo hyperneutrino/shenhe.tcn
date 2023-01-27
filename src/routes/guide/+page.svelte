@@ -60,66 +60,298 @@
             "99.57",
             "Provides decent base ATK and a useful passive that can help mitigate ER requirements. Your rotations may need to change; because of the passive, you will have to use your Elemental Burst before your Elemental Skill, and your ER requirement drops to about 158%.",
         ],
-    ] as [string, string, string, string][];
+    ] as string[][];
+
+    const teammates = [
+        [
+            "Cryo",
+            "C_Ayaka",
+            "Kamisato Ayaka",
+            "On-Field Cryo DPS",
+            "S+",
+            "Ayaka is a strong carry who can take advantage of every part of Shenhe's kit. Since she builds Crit and Cryo DMG%, Shenhe works very well with her.",
+        ],
+        [
+            "Cryo",
+            "C_Ganyu",
+            "Ganyu",
+            "On-Field Cryo DPS/Sub-DPS",
+            "S+",
+            "Ganyu is a strong carry who can take advantage of every part of Shenhe's kit for the same reasons as Ayaka.",
+        ],
+        [
+            "Anemo",
+            "C_Kazuha",
+            "Kaedehara Kazuha",
+            "Grouper/Buffer",
+            "S+",
+            "Kazuha significantly increases team damage output. Additionally, his infusion allows him to use some quills (remember that Swirl damage does not apply quills).",
+        ],
+        [
+            "Anemo",
+            "C_Venti",
+            "Venti",
+            "Grouper/Battery",
+            "S+",
+            "Venti is strong for AoE content with Mono-Cryo and Perma-Freeze. He also helps with your energy needs.",
+        ],
+        [
+            "Hydro",
+            "C_Kokomi",
+            "Sangonomiya Kokomi",
+            "Support/Healer",
+            "S+",
+            "Kokomi can hold Tenacity of the Millelith, which is both activated by and good for Shenhe's Icy Quills. She can also hold Thrilling Tales of Dragon Slayers, and her Hydro application is very strong for Freeze teams.",
+        ],
+        [
+            "Hydro",
+            "C_Mona",
+            "Mona",
+            "Support/Buffer",
+            "S-",
+            "Mona provides decent Hydro application. The Omen buff is quite strong.",
+        ],
+        [
+            "Hydro",
+            "C_Xingqiu",
+            "Xingqiu",
+            "Support/Sub-DPS",
+            "S-",
+            "Xingqiu is strong for single-target situations. He is not recommended for AoE content.",
+        ],
+        [
+            "Hydro",
+            "C_Yelan",
+            "Yelan",
+            "Support/Sub-DPS",
+            "S-",
+            "Yelan is similar to Xingqiu in many ways and can work quite nicely for an NA-centric Cryo DPS or in Ayaka Perma-Freeze.",
+        ],
+        [
+            "Cryo",
+            "C_Eula",
+            "Eula",
+            "On-Field Phys DPS",
+            "A",
+            "Eula's synergy with Shenhe's quills is slightly weaker because she builds Phys DMG%, but the Phys RES shred and Elemental Burst DMG% are both good for Eula.",
+        ],
+        [
+            "Cryo",
+            "C_Diona",
+            "Diona",
+            "Support",
+            "A",
+            "Diona has good energy generation, a strong shield, and is a good pick in Mono-Cryo. Additionally, she can hold 4-Piece Noblesse Oblige allowing Shenhe to build more personal damage if desired.",
+        ],
+        [
+            "Cryo",
+            "C_Kaeya",
+            "Kaeya",
+            "Cryo Sub-DPS",
+            "A",
+            "Kaeya is a strong battery in freeze teams and has good off-field damage.",
+        ],
+        [
+            "Cryo",
+            "C_Rosaria",
+            "Rosaria",
+            "Cryo Sub-DPS",
+            "A",
+            "Rosaria is a decent battery and has good off-field damage. She can also buff CRIT Rate, which is always useful.",
+        ],
+        [
+            "Pyro",
+            "C_Bennett",
+            "Bennett",
+            "Buffer/Healer",
+            "A",
+            "Bennett is indispensable for Reverse Melt teams. However, Shenhe's Icy Quills do not snapshot, so they cannot benefit from Bennett's Elemental Burst's ATK buff while she is off-field.",
+        ],
+        [
+            "Cryo",
+            "C_Aloy",
+            "Aloy",
+            "On-Field Cryo DPS",
+            "A-",
+            "Aloy works with Shenhe as she is a Cryo main DPS and will build helpful stats like Crit and Cryo DMG%. However, Aloy is quite weak overall and her mechanics are a bit inconvenient. If you want to run Aloy, Shenhe is a good investment for her, but Shenhe herself has better options.",
+        ],
+        [
+            "Cryo",
+            "C_Layla",
+            "Layla",
+            "Support/Shielder",
+            "A-",
+            "Layla can work as a defensive option for Mono-Cryo teams. However, Diona tends to work better with Shenhe and has a Cryo shield as well.",
+        ],
+        [
+            "Anemo",
+            "C_Sucrose",
+            "Sucrose",
+            "Grouper/Buffer",
+            "A-",
+            "Sucrose is significantly better for Shenhe at C6. Her EM buffing usually isn't too useful for Shenhe teams.",
+        ],
+        [
+            "Anemo",
+            "C_Jean",
+            "Jean",
+            "Support/Healer",
+            "A-",
+            "Jean has no Cryo infusion and therefore cannot use Shenhe's quills. Her grouping and healing is still good.",
+        ],
+        [
+            "Cryo",
+            "C_Chongyun",
+            "Chongyun",
+            "Support / Cryo Sub-DPS",
+            "B+",
+            "Chongyun is a viable burst DPS for reverse melt. The Cryo infusion from his skill is niche but can be useful in some teams such as On-Field Kaeya Freeze. If you want to run main-DPS Shenhe, you will want Chongyun for the infusion.",
+        ],
+        [
+            "Anemo",
+            "C_Traveler",
+            "Traveler (Anemo)",
+            "Grouper",
+            "B+",
+            "Traveler's burst absorbs Cryo, but they push enemies away, which is not great.",
+        ],
+        [
+            "Pyro",
+            "C_Xiangling",
+            "Xiangling",
+            "Support",
+            "B+",
+            "Xiangling is a good melt enabler, although she has significant ER needs and therefore will probably need a dedicated battery.",
+        ],
+        [
+            "Cryo",
+            "C_Qiqi",
+            "Qiqi",
+            "Healer",
+            "B",
+            "Shenhe's shred adds a bit of damage to the damage from Ocean-Hued Clam, but Qiqi's energy deficiency can hinder your team significantly.",
+        ],
+        [
+            "Hydro",
+            "C_Candace",
+            "Candace",
+            "Support",
+            "B",
+            "Candace's Hydro application is not as strong as other options, so her synergy is not great. However, the increased damage on Elemental Normal Attacks is good with many of Shenhe's teams.",
+        ],
+        [
+            "Hydro",
+            "C_Tartaglia",
+            "Tartaglia",
+            "On-Field DPS",
+            "B",
+            "Childe has to be on-field to apply Hydro, and he cannot use quills. However, he can benefit from Shenhe's Attack DMG buff and can work in a Freeze team.",
+        ],
+        [
+            "Hydro",
+            "C_Ayato",
+            "Kamisato Ayato",
+            "On-Field DPS",
+            "B",
+            "Ayato functions similarly to Childe and for the same reasons, can work but is not extremely synergistic.",
+        ],
+        [
+            "Pyro",
+            "C_HuTao",
+            "Hu Tao",
+            "On-Field DPS",
+            "C",
+            "Hu Tao can benefit from Shenhe's held A4 buff and off-field Cryo application for melt, but does not benefit from Shenhe's more important buffs like the Phys/Cryo RES shred and cannot use Icy Quills. Also, Hu Tao is quite dependent on Xingqiu, which means you can only have at most one Cryo/Anemo unit to use Icy Quills.",
+        ],
+        [
+            "Hydro",
+            "C_Barbara",
+            "Barbara",
+            "Support/Healer",
+            "D",
+            "Barbara is a very poor Hydro option but works if you have nothing else. She can hold Thrilling Tales of Dragon Slayers, but is not good at Hydro application compared to the other options and has very weak synergy with Shenhe.",
+        ],
+        [
+            "Hydro",
+            "C_Nilou",
+            "Nilou",
+            "Support",
+            "D-",
+            "Nilou can be used for Hydro application if strictly needed. However, even Barbara is a better option, and Nilou cannot hold Thrilling Tales of Dragon Slayers and does not have reliable Hydro application, and she is significantly weakened by not being used in her intended Hydro-Dendro team format.",
+        ],
+    ] as string[][];
 </script>
 
 <script lang="ts">
     import Blockquote from "$lib/Blockquote.svelte";
     import Callout from "$lib/Callout.svelte";
+    import Chip from "$lib/Chip.svelte";
+    import Collapsable from "$lib/Collapsable.svelte";
     import Container from "$lib/Container.svelte";
     import IconTitle from "$lib/IconTitle.svelte";
+    import Multiplier from "$lib/Multiplier.svelte";
+    import Team from "$lib/Team.svelte";
 
     let width: number = 0;
+    let y: number = 0;
+
     let size: number = 100;
     let sizepx: string = "100px";
+
+    let selected: string[] = [];
 
     $: size = width < 1000 ? width * 0.1 : 100;
     $: sizepx = `${size}px`;
 </script>
 
-<svelte:window bind:innerWidth={width} />
+<svelte:window bind:innerWidth={width} bind:scrollY={y} />
 
 <div id="top-block" />
 
 <div style="background-color: #146; padding-top: 50px; padding-bottom: 150px">
     <Container>
-        <div id="toc">
-            <b>Table of Contents</b>
-            <ul>
-                <li><a href="#whois">Who is Shenhe?</a></li>
-                <li><a href="#role">What is her role?</a></li>
-                <li>
-                    <a href="#why">Why should you play/pull for Shenhe?</a>
-                    <ul><li><a href="#pros-cons">Pros &amp; Cons</a></li></ul>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#talents">Talents</a>
-                    <ul>
-                        <li><a href="#breakdown">Breakdown</a></li>
-                        <li><a href="#priority">Priority</a></li>
-                        <li><a href="#ascension">Ascension</a></li>
-                    </ul>
-                </li>
-                <li><a href="#constellations">Constellations</a></li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#artifacts">Artifacts</a>
-                    <ul>
-                        <li><a href="#sets">Sets</a></li>
-                        <li><a href="#stats">Stats</a></li>
-                        <li><a href="#er">ER Requirements</a></li>
-                    </ul>
-                </li>
-                <li><a href="#weapons">Weapons</a></li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#credits">Credits</a>
-                </li>
-            </ul>
+        <div id="toc-box">
+            <div id="toc">
+                <b>Table of Contents</b>
+                <ul>
+                    <li><a href="#whois">Who is Shenhe?</a></li>
+                    <li><a href="#role">What is her role?</a></li>
+                    <li>
+                        <a href="#why">Why should you play/pull for Shenhe?</a>
+                        <ul><li><a href="#pros-cons">Pros &amp; Cons</a></li></ul>
+                    </li>
+                    <li><a href="#complaints">Addressing Common Complaints</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#talents">Talents</a>
+                        <ul>
+                            <li><a href="#breakdown">Breakdown</a></li>
+                            <li><a href="#priority">Priority</a></li>
+                            <li><a href="#ascension">Ascension</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#constellations">Constellations</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#artifacts">Artifacts</a>
+                        <ul>
+                            <li><a href="#sets">Sets</a></li>
+                            <li><a href="#stats">Stats</a></li>
+                            <li><a href="#er">ER Requirements</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#weapons">Weapons</a></li>
+                    <li><a href="#synergy">Character Synergy</a></li>
+                    <li><a href="#teams">Sample Teams</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#credits">Credits</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </Container>
     <br />
@@ -154,11 +386,11 @@
             <br />
             <h2 id="why">Why should you play/pull for Shenhe?</h2>
             <Callout icon="❕" color="#b23">
-                Whether you should pull for Shenhe or not is, ultimately, your choice. Please
-                remember that only you can decide if a character is worth spending your time, money,
-                and resources on. This guide's main purpose is to give you the most information
-                possible in order to clear any misunderstandings about Shenhe and help you
-                understand her kit better. That said, below are some of Shenhe's pros and cons.
+                <b>Spend Responsibly!</b> Whether you should pull for Shenhe or not is, ultimately, your
+                choice. Please remember that only you can decide if a character is worth spending your
+                time, money, and resources on. This guide's main purpose is to give you the most information
+                possible in order to clear any misunderstandings about Shenhe and help you understand
+                her kit better. That said, below are some of Shenhe's pros and cons.
             </Callout>
             <br />
             <h3 id="pros-cons">Pros</h3>
@@ -246,6 +478,80 @@
                 As a supportive unit, she is reliant on bolstering already well-invested Cryo units
                 &mdash; however, the utility she brings in doing so makes her very competitive.
             </p>
+            <br />
+            <h2 id="complaints">Addressing Common Complaints</h2>
+            <Collapsable title="Shenhe is a deficient battery">
+                <p>
+                    Although her cooldowns make her particle generation lower than other Cryo units
+                    (e.g. Rosaria and Shenhe both generate 3 particles, but Rosaria's skill cooldown
+                    is 6 seconds while Shenhe's is 10, giving Rosaria 66% more energy generation),
+                    Shenhe gains a lot more out of swapping in to use her skill than other
+                    batteries.
+                </p>
+                <p>
+                    Tapping her skill twice per rotation (6 particles) is practically enough for
+                    most purposes. Favonius Lance boosts her battery capabilities even further.
+                </p>
+            </Collapsable>
+            <Collapsable title="Shenhe's Icy Quill limit reduces her support potential">
+                <p>
+                    While it may feel disappointing that she cannot raise all 20 instances of
+                    Ayaka's burst damage, consider that because the quills deal flat damage, the
+                    limit means that she works just as well in teams with fewer but higher instances
+                    of damage as in teams with more but lower ticks.
+                </p>
+                <p>
+                    If there were no limit, to avoid Shenhe being overpowered with Ayaka, she would
+                    have to be underwhelming with units like Ganyu, so this limit actually allows
+                    her to have more flexibility without breaking the game balance.
+                </p>
+                <p>
+                    Instead of thinking of the quills as a buff, think of it as a sub-DPS mechanism
+                    that scales with her teammates' investment. Rather than thinking of it as
+                    increasing her allies' damage, think of it as her hijacking her allies' stats
+                    (Crit + Cryo DMG%) to do more of her own damage.
+                </p>
+                <p>
+                    Also, Shenhe still offers substantial amounts of DMG% and Cryo/Phys RES shred,
+                    so she is still a strong, competitive option compared to other supports in Cryo
+                    teams.
+                </p>
+            </Collapsable>
+            <Collapsable title="Shenhe's damage buffing capabilities fall off in AoE">
+                <p>
+                    Shenhe's quills apply on-hit, so against more enemies, her quills will run out
+                    faster. However just like with the above point, her A1 and A4 buffs in
+                    combination with the Cryo/Phys RES shred will still contribute a lot to your
+                    team's damage even while her quills are down.
+                </p>
+                <p>
+                    Additionally, while this point is true, units like Hu Tao are still considered
+                    very strong despite being sub-par for AoE content. Each unit has their own
+                    strengths, and Shenhe, like most other units, may not be the strongest in
+                    <i>all</i> situations, but remains competitive in all scenarios.
+                </p>
+            </Collapsable>
+            <Collapsable title="Shenhe is worse in Cryo teams than Kazuha or Ganyu support">
+                <p>
+                    Most calculations have shown that Shenhe outperforms Kazuha and Ganyu support
+                    against 1-2 targets. (Source: <a
+                        href="https://keqingmains.com/shenhe/#Misconceptions_about_Shenhe"
+                        target="_blank"
+                        rel="noreferrer">KQM Guide</a
+                    >)
+                </p>
+                <p>
+                    In AoE settings, Kazuha and Ganyu's quadratic scaling will usually outperform
+                    Shenhe. Like in the previous point, this does not mean Shenhe is weak, it just
+                    means some units will be stronger in some scenarios and weaker in others.
+                </p>
+                <p>
+                    Also, Kazuha and Ganyu both have high synergy with Shenhe, so you may be able to
+                    use them in combination with each other to amplify her Icy Quills' strength
+                    further. Additionally, Kazuha is a valuable support in many teams, so Shenhe can
+                    free him up for your other Spiral Abyss team.
+                </p>
+            </Collapsable>
         </Container>
     </div>
     <br />
@@ -268,6 +574,7 @@
                 not worth using for most team compositions. However, you could make main DPS Shenhe
                 work, we will just not cover it here as it is not usually performant.
             </p>
+            <Multiplier key="normal_attack" />
             <br />
             <IconTitle key="elemental_skill" />
             <Blockquote color="#57d">
@@ -350,6 +657,7 @@
                     </p>
                 </li>
             </ul>
+            <Multiplier key="elemental_skill" />
             <br />
             <IconTitle key="elemental_burst" />
             <Blockquote color="#57d">
@@ -381,6 +689,12 @@
                     </p>
                 </li>
             </ul>
+            <Multiplier key="elemental_burst" />
+            <br />
+            <IconTitle key="utility" />
+            <Blockquote color="#57d">
+                Shenhe received 25% more rewards when dispatched on a Liyue Expedition for 20 hours.
+            </Blockquote>
             <br />
             <h3 id="priority">Priority</h3>
             <div style="display: flex; flex-direction: column; align-items: center; width: 100%">
@@ -420,7 +734,7 @@
                 should be your top priority. Her burst is a good source of personal damage and is
                 worth leveling up for the increased RES shred.
             </p>
-            <Callout icon="⚠" color="#c80">
+            <Callout icon="⚠" color="#b82">
                 Her attacks have unimpressive multipliers and because she does not have infusion,
                 are relatively useless. For niche Chongyun/Yunjin-based teams, you would level them
                 up to use her as a main DPS, but for the standard meta Shenhe teams, you do not need
@@ -477,6 +791,7 @@
                 mind that the effects you observe will vary based on what teammates you use with
                 Shenhe and the level of investment of your other characters. These numbers are only
                 for guidance, not to instruct you what is worth or not worth your money.
+                <b>Spend Responsibly!</b>
             </Callout>
             <br />
             <IconTitle key="c1" suffix="(4-5% increase from C0)" />
@@ -488,7 +803,7 @@
                 casting it will overwrite any existing quills. However, the A4 buffs do not
                 overwrite each other, so you can have both types simultaneously with C1.
             </p>
-            <Callout icon="💡" color="#2a8">
+            <Callout icon="💡" color="#196">
                 <b>Example Rotation:</b> Tap Shenhe's Elemental Skill, use the 5 quills, swap to Shenhe,
                 hold Shenhe's Elemental Skill for 7 quills and the hold buff. You will not be limited
                 by the held E's longer cooldown.
@@ -650,7 +965,6 @@
             </p>
             <br />
             <h2 id="weapons">Weapons</h2>
-
             <Callout icon="ℹ️" color="#257">
                 <b>%</b> shows the damage performance relative to Favonius Lance. Check the
                 <a
@@ -659,6 +973,7 @@
                     rel="noreferrer">mastersheet</a
                 > for in-depth comparisons.
             </Callout>
+            <br />
             <table cellspacing="0">
                 <tr>
                     <td />
@@ -669,17 +984,16 @@
                     {/if}
                 </tr>
                 {#each weapons as [img, name, ratio, details], index}
-                    {@const style = index % 2 === 0 ? "" : "background-color: #fff1"}
-                    <tr {style}>
-                        <td><img src="/images/icons/{img}.webp" alt={name} width="50px" /></td>
+                    <tr>
+                        <td><img src="/images/icons/{img}.webp" alt={name} width="75px" /></td>
                         <td>{name}</td>
                         <td>{ratio}%</td>
                         {#if width > 1000}
-                            <td>{details}</td>
+                            <td style="width: 60%">{details}</td>
                         {/if}
                     </tr>
                     {#if width <= 1000}
-                        <tr {style}>
+                        <tr>
                             <td colspan={3}>
                                 {details}
                             </td>
@@ -687,6 +1001,59 @@
                     {/if}
                 {/each}
             </table>
+            <br />
+            <h2 id="synergy">Character Synergy</h2>
+            {#each ["Cryo", "Anemo", "Hydro", "Pyro"] as element}
+                <Chip
+                    icon="/images/icons/E_{element}.svg"
+                    content={element}
+                    background={selected.includes(element) ? "#0032" : "#fff3"}
+                    on:click={() =>
+                        (selected = selected.includes(element)
+                            ? selected.filter((x) => x !== element)
+                            : [...selected, element])}
+                />
+                &nbsp;
+            {/each}
+            <table cellspacing="0">
+                <tr>
+                    <td />
+                    <td><h4>Unit</h4></td>
+                    <td><h4>Synergy</h4></td>
+                    {#if width > 1000}
+                        <td><h4>Details</h4></td>
+                    {/if}
+                </tr>
+                {#each selected.length === 0 ? teammates : teammates.filter( ([element]) => selected.includes(element), ) as [_, img, unit, role, synergy, details], index}
+                    <tr>
+                        <td><img src="/images/icons/{img}.webp" alt={unit} width="75px" /></td>
+                        <td><b>{unit}</b><br />{role}</td>
+                        <td class="synergy {synergy.charAt(0)}">{synergy}</td>
+                        {#if width > 1000}
+                            <td style="width: 60%">{details}</td>
+                        {/if}
+                    </tr>
+                    {#if width <= 1000}
+                        <tr>
+                            <td colspan={3}>
+                                {details}
+                            </td>
+                        </tr>
+                    {/if}
+                {/each}
+            </table>
+            <br />
+            <h2 id="teams">Sample Teams</h2>
+            <Callout icon="ℹ️" color="#257">
+                For information on recommended variations of each team, their strengths and
+                weaknesses, and how to play them, check out the
+                <a href="https://keqingmains.com/shenhe/#Sample_Teams">KQM Guide</a>.
+            </Callout>
+            <Team name="Freeze" team={["Shenhe", "Cryo", "Hydro", "CryoAnemo"]} />
+            <Team name="Mono-Cryo" team={["Shenhe", "Cryo", "Cryo", "Anemo"]} />
+            <Team name="Reverse Melt" team={["Shenhe", "Cryo", "Xiangling", "Bennett"]} />
+            <Team name="Eula" team={["Eula", "Shenhe", "Unknown", "Unknown"]} />
+            <Team name="Melt Tao" team={["HuTao", "Xingqiu", "Shenhe", "Cryo"]} />
         </Container>
     </div>
     <br />
@@ -723,7 +1090,7 @@
     </div>
 </div>
 
-<button id="top" on:click={() => window.scrollTo({ top: 0 })}>
+<button id="top" class={y < 50 ? "hide" : ""} on:click={() => window.scrollTo({ top: 0 })}>
     <i class="material-icons">arrow_upward</i>
 </button>
 
@@ -738,14 +1105,25 @@
     }
 
     @media screen and (min-width: 1000px) {
-        div#toc {
+        div#toc-box {
             position: fixed;
-            top: 30vh;
-            right: 10vw;
+            top: 0;
+            right: 5vw;
 
+            height: 100%;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        div#toc {
             background-color: #ffffff11;
             backdrop-filter: blur(5px);
             padding: 2em;
+
+            font-size: 90%;
+            line-height: 150%;
         }
 
         div.main {
@@ -770,7 +1148,7 @@
 
     button#top {
         position: fixed;
-        right: 5vw;
+        left: 5vw;
         bottom: 5vh;
         outline: none;
         border: none;
@@ -778,5 +1156,36 @@
         background-color: #227;
         color: white;
         padding-top: 5px;
+        transition: 200ms ease-in-out;
+    }
+
+    .hide {
+        transform: translateY(50px);
+        opacity: 0%;
+    }
+
+    .synergy {
+        font-family: "Genshin", serif;
+        font-size: 150%;
+
+        &.S {
+            color: gold;
+        }
+
+        &.A {
+            color: green;
+        }
+
+        &.B {
+            color: #44e;
+        }
+
+        &.C {
+            color: #fb0;
+        }
+
+        &.D {
+            color: red;
+        }
     }
 </style>

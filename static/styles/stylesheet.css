@@ -71,3 +71,75 @@ td {
     margin: 0;
     padding: 0.5em;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    align-items: center;
+}
+
+input {
+    padding: 0.5em;
+    background-color: #fff3;
+    backdrop-filter: blur(3px);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+textarea {
+    padding: 0.5em;
+    background-color: #fff3;
+    backdrop-filter: blur(3px);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: #3cc;
+    border-radius: 5px;
+    padding: 0.5em 2em;
+    font-family: "Genshin", serif;
+}
+
+.alert {
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    margin: 1em 0;
+}
+
+.error {
+    background-color: #f006;
+}
+
+.success {
+    background-color: #0f06;
+}
+
+.noselect {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+tr:nth-child(even) {
+    background-color: #fff1;
+}
