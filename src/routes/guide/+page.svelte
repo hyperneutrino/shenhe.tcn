@@ -1083,9 +1083,10 @@
             </p>
             <p>
                 Special thanks to the Shenhe Mains staff and TC team for reviewing all of this
-                information.
+                information, particularly <b>ευδαιμονία#0420</b> for answering many questions I had during
+                the creation of this version of the guide.
             </p>
-            <p>Website created by HyperNeutrino#1759.</p>
+            <p>This website was created by <b>HyperNeutrino#1759</b>.</p>
         </Container>
     </div>
 </div>

@@ -38,7 +38,15 @@
         <div>
             <a href="/" on:click={() => (open = false)}><b>Home</b></a>
             <a href="/guide" on:click={() => (open = false)}>Guide</a>
+            <a
+                href="https://docs.google.com/spreadsheets/d/1-vkmgp5n0bI9pvhUg110Aza3Emb2puLWdeoCgrxDlu4"
+                target="_blank"
+                rel="noreferrer"
+            >
+                Calculator
+            </a>
             <a href="/apply" on:click={() => (open = false)}>Staff Applications</a>
+            <a href="/tech" on:click={() => (open = false)}>Credits + Tech</a>
             <a href="https://discord.gg/shenhe" target="_blank" rel="noreferrer">Discord Server</a>
             <a href="https://reddit.com/r/shenhemains" target="_blank" rel="noreferrer">
                 Subreddit
