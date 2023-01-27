@@ -43,7 +43,7 @@
                 target="_blank"
                 rel="noreferrer"
             >
-                Calculator
+                ER Calculator
             </a>
             <a href="/apply" on:click={() => (open = false)}>Staff Applications</a>
             <a href="/tech" on:click={() => (open = false)}>Credits + Tech</a>

@@ -963,6 +963,15 @@
                 With two other Cryo units, or one other and Venti, her ER requirements drop to
                 <b>130-145 ER%</b>.
             </p>
+            <Callout icon="💡" color="#196">
+                Check out the <b
+                    ><a
+                        href="https://docs.google.com/spreadsheets/d/1-vkmgp5n0bI9pvhUg110Aza3Emb2puLWdeoCgrxDlu4"
+                        target="_blank"
+                        rel="noreferrer">ER calculator</a
+                    ></b
+                > from Zakharov (KQM)!
+            </Callout>
             <br />
             <h2 id="weapons">Weapons</h2>
             <Callout icon="ℹ️" color="#257">
