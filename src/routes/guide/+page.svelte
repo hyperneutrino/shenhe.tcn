@@ -1080,7 +1080,7 @@
                     ></b
                 >. Huge thanks to KQM and the writers for all of the hard work that went into the
                 original guide! Lead Writer: <b>XenoVX#6150</b>. Co-Writers: <b>Zamo#6399</b>,
-                <b>KB#1111</b>, <b>ApolloIV#8177</b>, <b>Sitri#9504</b>.
+                <b>KB#1111</b>, <b>Kuro_kami91#6652</b>, <b>Sitri#9504</b>.
             </p>
             <p>
                 Much of the data used for these conclusions and calculations are from the <b

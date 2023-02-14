@@ -7,15 +7,19 @@ export const GET: RequestHandler = async ({ cookies, url, fetch }) => {
         return new Response(JSON.stringify({ error: "No refresh token found." }), { status: 500 });
 
     const data = {
-        client_id: config.get("client_id"),
-        client_secret: config.get("client_secret"),
+        client_id: config.get("client_id") as string,
+        client_secret: config.get("client_secret") as string,
         grant_type: "refresh_token",
-        redirect_uri: config.get("callback"),
-        refresh_token: discord_refresh_token,
+        redirect_uri: config.get("callback") as string,
+        refresh_token: discord_refresh_token as string,
         scope: "identify guilds",
     };
 
-    const request = await fetch("https://discord.com/api/v8/oauth2/token");
+    const request = await fetch("https://discord.com/api/v8/oauth2/token", {
+        method: "post",
+        body: new URLSearchParams(data),
+        headers: { "Content-Type": "application/json" },
+    });
 
     if (!request.ok)
         return new Response(JSON.stringify({ error: "No refresh token found." }), { status: 500 });
