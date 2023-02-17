@@ -98,6 +98,10 @@ input {
     line-height: 20px;
 }
 
+::placeholder {
+    color: #ffffffaa;
+}
+
 textarea {
     padding: 0.5em;
     background-color: #fff3;
