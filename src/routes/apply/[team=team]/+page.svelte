@@ -53,7 +53,13 @@
                         If you're not sure, just enter your current local time.
                         <br />
                         <br />
-                        <input type="text" name="tz" required value={form?.tz ?? ""} />
+                        <input
+                            type="text"
+                            name="tz"
+                            required
+                            value={form?.tz ?? ""}
+                            placeholder="GMT-5, EST, ..."
+                        />
                     </div>
                     <div class="white">
                         <p>
@@ -86,21 +92,24 @@
                             <Textarea name="intro" required value={form?.intro} />
                         </div>
                         <div class="white">
-                            <p>What are your strengths and weaknesses?</p>
-                            <Textarea
-                                name="strengths_weaknesses"
-                                required
-                                value={form?.strengths_weaknesses}
-                            />
+                            <p>What are your strengths?</p>
+                            <Textarea name="strengths" required value={form?.strengths} />
+                        </div>
+                        <div class="white">
+                            <p>What are your weaknesses?</p>
+                            <Textarea name="weaknesses" required value={form?.weaknesses} />
                         </div>
                         <div class="white">
                             <p>Describe how you would handle a fast and problematic chat.</p>
-                            For example, describe a situation with a problematic user that is active
-                            and contributes positively but frequently makes other users feel uncomfortable,
-                            and how you might handle a situation like that.
-                            <br />
-                            <br />
                             <Textarea name="example" required value={form?.example} />
+                        </div>
+                        <div class="white">
+                            <p>
+                                How would you handle a situation with a user that is active and
+                                contributes positively but frequently makes other users feel
+                                uncomfortable?
+                            </p>
+                            <Textarea name="example2" required value={form?.example2} />
                         </div>
                     {:else if data.team === "tc"}
                         <p>

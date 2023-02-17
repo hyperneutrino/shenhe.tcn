@@ -15,8 +15,10 @@ const keys = [
     "time",
     "impact",
     "intro",
-    "strengths_weaknesses",
+    "strengths",
+    "weaknesses",
     "example",
+    "example2",
     "tc_knowledge",
     "shenhe_xp",
     "event_xp",
@@ -72,7 +74,8 @@ export const actions: Actions = {
             !n.tz ||
             !n.time ||
             !n.impact ||
-            (params.team === "mod" && (!n.intro || !n.strengths_weaknesses || !n.example)) ||
+            (params.team === "mod" &&
+                (!n.intro || !n.strengths || !n.weaknesses || !n.example || !n.example2)) ||
             (params.team === "tc" && (!n.tc_knowledge || !n.shenhe_xp)) ||
             (params.team === "event" &&
                 (!n.event_xp ||
@@ -129,10 +132,15 @@ export const actions: Actions = {
                     "Introduce yourself. Who are you, what's your personality like, what experience do you have with moderation, etc.?",
                     n.intro,
                 ]);
-                entries.push(["What are your strengths and weaknesses?", n.strengths_weaknesses]);
+                entries.push(["What are your strengths?", n.strengths]);
+                entries.push(["What are your weaknesses?", n.weaknesses]);
                 entries.push([
-                    "Describe how you would handle a fast and problematic chat. (Applicant asked to present an example situation.)",
+                    "Describe how you would handle a fast and problematic chat.",
                     n.example,
+                ]);
+                entries.push([
+                    "Describe how you would handle an active user positive contributions who frequently makes others uncomfortable.",
+                    n.example2,
                 ]);
             } else if (params.team === "tc") {
                 entries.push([
