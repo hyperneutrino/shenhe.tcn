@@ -21,7 +21,7 @@ export const GET: RequestHandler = ({ cookies, url }) => {
         cookies.serialize("state", state, {
             path: "/",
             httpOnly: true,
-            sameSite: "none",
+            sameSite: "lax",
             expires: new Date(Date.now() + 10 * 60 * 1000),
         }),
     );

@@ -31,9 +31,6 @@ export const GET: RequestHandler = async ({ cookies, url, fetch }) => {
     if (!request.ok) return fail();
     const response = await request.json();
 
-    const access_token_expiry = new Date(Date.now() + response.expires_in);
-    const refresh_token_expiry = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
-
     const headers = new Headers({ Location: state.substring(32) });
 
     headers.append(
@@ -41,8 +38,8 @@ export const GET: RequestHandler = async ({ cookies, url, fetch }) => {
         cookies.serialize("discord_access_token", response.access_token, {
             path: "/",
             httpOnly: true,
-            sameSite: "none",
-            expires: access_token_expiry,
+            sameSite: "lax",
+            maxAge: response.expires_in,
         }),
     );
 
@@ -51,8 +48,8 @@ export const GET: RequestHandler = async ({ cookies, url, fetch }) => {
         cookies.serialize("discord_refresh_token", response.refresh_token, {
             path: "/",
             httpOnly: true,
-            sameSite: "none",
-            expires: refresh_token_expiry,
+            sameSite: "lax",
+            maxAge: 30 * 24 * 60 * 60 * 1000,
         }),
     );
 
