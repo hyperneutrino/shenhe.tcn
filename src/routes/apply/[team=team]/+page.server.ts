@@ -139,7 +139,7 @@ export const actions: Actions = {
                     n.example,
                 ]);
                 entries.push([
-                    "Describe how you would handle an active user positive contributions who frequently makes others uncomfortable.",
+                    "Describe how you would handle an active user who has positive contributions but frequently makes others uncomfortable.",
                     n.example2,
                 ]);
             } else if (params.team === "tc") {
