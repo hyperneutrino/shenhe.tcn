@@ -1398,7 +1398,7 @@
                 very strong investment that is essentially future-proof as she will pair well with
                 nearly any posisble Cryo unit in the future that can use her buffs and Icy Quills.
             </p>
-            <h2 id="acknowledgements">Acknowledgements</h2>
+            <h2 id="credits">Credits</h2>
             <p>
                 <b>ευδαιμονία#0420</b> for authoring the guide from which this webpage was written:
                 <a
