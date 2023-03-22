@@ -1,8 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;600&display=swap");
-
 @font-face {
     font-family: "Genshin";
     src: url(/fonts/zh-cn.ttf);
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    src: url(/fonts/AtkinsonHyperlegible-Regular.ttf);
 }
 
 html,
@@ -22,7 +25,7 @@ body {
     line-height: 175%;
     display: flex;
     flex-direction: column;
-    font-family: "Rubik", sans-serif;
+    font-family: "Atkinson Hyperlegible", serif;
     font-weight: 300;
     margin: 0;
     min-height: 100vh;
@@ -38,17 +41,14 @@ img.header-image {
     }
 }
 
-p {
-    font-size: 120%;
-}
-
 a {
     color: #33ddff;
     text-decoration: none;
 }
 
 b {
-    font-weight: 600;
+    font-weight: 700;
+    color: #ccf;
 }
 
 h1,
@@ -146,4 +146,8 @@ button {
 
 tr:nth-child(even) {
     background-color: #fff1;
+}
+
+hr {
+    border-color: #d9e9f9;
 }

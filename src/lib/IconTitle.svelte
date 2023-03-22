@@ -59,7 +59,15 @@
         },
         set_mix: {
             name: "2/2 Emblem / Blizzard Strayer / Gladiator / Shimenawa",
-            url: "/images/icons/Artifact.webp",
+            url: "/images/icons/SetMix.png",
+        },
+        set_4eosf: {
+            name: "4-Piece Emblem of Severed Fate",
+            url: "/images/icons/SetEoSF.webp",
+        },
+        set_4gf: {
+            name: "4-Piece Gladiator's Finale",
+            url: "/images/icons/SetGF.webp",
         },
     } as const;
 </script>

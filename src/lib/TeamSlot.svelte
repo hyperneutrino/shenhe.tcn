@@ -2,7 +2,7 @@
     export let slot: string;
     let icon: string;
 
-    icon = ["Cryo", "Anemo", "Hydro", "Pyro", "Electro", "Geo", "Dendro"].includes(slot)
+    icon = ["Cryo", "Anemo", "Hydro", "Pyro", "Electro", "Geo", "Dendro", "Phys"].includes(slot)
         ? `E_${slot}.svg`
         : `C_${slot}.webp`;
 </script>

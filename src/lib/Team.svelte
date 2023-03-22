@@ -1,8 +1,8 @@
 <script lang="ts">
     import TeamSlot from "./TeamSlot.svelte";
 
-    export let name: string;
     export let team: [string, string, string, string];
+    export let name: string = team.join(" + ");
 </script>
 
 <div class="back">
