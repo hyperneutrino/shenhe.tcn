@@ -615,7 +615,7 @@
                 </p>
                 <p>
                     A crazy constellation with major caveats. Elemental Skill, Elemental Burst, and
-                    Plunging Attack DMG will still consume Icy QUills, so the effect is lost once
+                    Plunging Attack DMG will still consume Icy Quills, so the effect is lost once
                     those are gone (that is, once you run out of quills, you lose the Normal and
                     Charged Attack DMG bonus even though they don't consume stacks themselves).
                 </p>
