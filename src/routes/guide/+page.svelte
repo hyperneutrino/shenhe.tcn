@@ -874,7 +874,7 @@
             <Image
                 src="https://i.imgur.com/BsUZxBE.png"
                 alt="Example Cryo DPS Shenhe build"
-                credit="An example Cryo DPS Shenhe build via ευδαιμονία#0420"
+                credit="An example Cryo DPS Shenhe build via ευδαιμονία#4870"
             />
             <br />
             <h2 id="synergy">Character Synergy</h2>
