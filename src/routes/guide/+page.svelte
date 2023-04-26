@@ -1400,7 +1400,7 @@
             </p>
             <h2 id="credits">Credits</h2>
             <p>
-                <b>ευδαιμονία#0420</b> for authoring the guide from which this webpage was written:
+                <b>ευδαιμονία#4870</b> for authoring the guide from which this webpage was written:
                 <a
                     href="https://docs.google.com/document/d/1T6uUXPCmJufwbkadpTfgwIkEB_CSA9owr3igyzG8XTM"
                     >https://docs.google.com/document/d/1T6uUXPCmJufwbkadpTfgwIkEB_CSA9owr3igyzG8XTM</a
