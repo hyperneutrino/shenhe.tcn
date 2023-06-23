@@ -1400,25 +1400,25 @@
             </p>
             <h2 id="credits">Credits</h2>
             <p>
-                <b>ευδαιμονία#4870</b> for authoring the guide from which this webpage was written:
+                <b>eudaimonia0420</b> for authoring the guide from which this webpage was written:
                 <a
                     href="https://docs.google.com/document/d/1T6uUXPCmJufwbkadpTfgwIkEB_CSA9owr3igyzG8XTM"
                     >https://docs.google.com/document/d/1T6uUXPCmJufwbkadpTfgwIkEB_CSA9owr3igyzG8XTM</a
                 >
             </p>
             <p>
-                <b>HyperNeutrino#1759</b> for creating this website, administrative help, and proofreading.
+                <b>hyperneutrino</b> for creating this website, administrative help, and proofreading.
             </p>
             <p><b>xaitll#7877</b> for administrative help and proofreading.</p>
             <p>
-                <b>Mr_Noodle#5744</b> for sourcing the fanart for the guide and compiling the FAQ.
+                <b>.mr_noodle</b> for sourcing the fanart for the guide and compiling the FAQ.
             </p>
             <p>
-                <b>Nociii#0111 and the KNET team</b> for their invaluable proofreading, experience, and
+                <b>nociii and the KNET team</b> for their invaluable proofreading, experience, and
                 over 150 review comments.
             </p>
             <p>
-                <b>jamie#9248</b> (<a href="https://www.youtube.com/@jamiekb9v"
+                <b>jamie9248</b> (<a href="https://www.youtube.com/@jamiekb9v"
                     >jamie (kb9v) on YouTube</a
                 >) for the many guides and showcases linked and referenced in this guide and
                 proofreading.
