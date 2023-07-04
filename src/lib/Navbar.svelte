@@ -38,7 +38,6 @@
             else if (e.key === "c") goto("/tech");
             else if (e.key === "d") window.open("https://discord.gg/shenhe");
             else if (e.key === "r") window.open("https://reddit.com/r/shenhemains");
-            else if (e.key === "t") window.open("https://twitch.tv/shenhemains");
             else if (e.key === "l") goto($user ? "/api/logout" : "/api/login");
             else return;
 
@@ -79,7 +78,6 @@
             <a href="https://reddit.com/r/shenhemains" target="_blank" rel="noreferrer">
                 Subreddit
             </a>
-            <a href="https://twitch.tv/shenhemains" target="_blank" rel="noreferrer">Twitch</a>
         </div>
         <div>
             {#if $user}
