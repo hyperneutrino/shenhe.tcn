@@ -25,7 +25,6 @@
         <ul>
             <li><p>Routing + Front-End: <b>SvelteKit</b></p></li>
             <li><p>Bundling: <b>Vite</b></p></li>
-            <li><p>Database: <b>MongoDB</b></p></li>
             <li><p>Discord Access: <b>discord.js</b></p></li>
             <li><p>Language: <b>TypeScript</b> (Node.JS) + <b>Svelte</b></p></li>
             <li><p>CDN: <b>Cloudflare</b></p></li>

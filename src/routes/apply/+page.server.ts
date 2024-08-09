@@ -1,6 +1,6 @@
-import db from "$lib/db.js";
 import type { PageServerLoad } from "./$types.js";
+import { OPEN_TEAMS } from "./teams.js";
 
 export const load: PageServerLoad = async () => {
-    return { open_teams: (await db.open_teams.find().toArray()).map((doc) => doc.team) };
+    return { open_teams: OPEN_TEAMS };
 };

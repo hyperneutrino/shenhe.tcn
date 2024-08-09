@@ -1,12 +1,11 @@
 import { client } from "$lib/bot.js";
-import db from "$lib/db.js";
 import { fail, type Actions } from "@sveltejs/kit";
 import { ChannelType, ThreadAutoArchiveDuration } from "discord.js";
+import { OPEN_TEAMS } from "../teams.js";
 import type { PageServerLoad } from "./$types.js";
 
 export const load: PageServerLoad = async ({ params }) => {
-    const teams = (await db.open_teams.find().toArray()).map((doc) => doc.team);
-    if (!teams.includes(params.team)) return { team_closed: true };
+    if (!OPEN_TEAMS.includes(params.team)) return { team_closed: true };
 };
 
 const keys = [
