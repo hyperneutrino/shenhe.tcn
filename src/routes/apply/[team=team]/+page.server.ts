@@ -113,7 +113,7 @@ export const actions: Actions = {
             entries.push(["Team", team_name]);
             entries.push([
                 "User",
-                `<@${user.id}> (${user.username}#${user.discriminator} \`${user.id}\`)`,
+                `<@${user.id}> (${user.tag} \`${user.id}\`)`,
             ]);
             entries.push(["Age", n.age]);
             entries.push(["Timezone / Local Time", n.tz]);
@@ -225,7 +225,7 @@ export const actions: Actions = {
             }
 
             const thread = await channel.threads.create({
-                name: `${user.username}[${user.discriminator}] - ${team_name} Application`,
+                name: `${user.tag} - ${team_name} Application`,
                 message: { content: "<@&1035298770327441418>" },
                 appliedTags: [tag_id, "1068250881474183168"],
                 autoArchiveDuration: ThreadAutoArchiveDuration.OneWeek,

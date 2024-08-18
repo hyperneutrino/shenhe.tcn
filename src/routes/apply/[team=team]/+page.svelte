@@ -22,7 +22,7 @@
             <form method="post">
                 <div class="glass">
                     <IconTitle
-                        name="Logged in as {data.user.username}#{data.user.discriminator}"
+                        name="Logged in as {data.user.tag}"
                         icon="https://cdn.discordapp.com/avatars/{data.user.id}/{data.user
                             .avatar}.webp"
                     />
