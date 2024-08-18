@@ -1,1 +1,1 @@
-export const OPEN_TEAMS = ["mod", "event"];
+export const OPEN_TEAMS = ["event"];
