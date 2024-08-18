@@ -83,7 +83,7 @@
             {#if $user}
                 <a href="/profile" on:click={() => (open = false)}>
                     <b>Welcome,</b>
-                    {$user.tag}!
+                    {$user.username}!
                 </a>
                 <a href="/api/logout?redirect={encodeURIComponent($page.url.pathname)}">Log Out</a>
             {:else}
